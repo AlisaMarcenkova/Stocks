@@ -16,7 +16,10 @@ $search = strtoupper($_GET['search'] ?? '');
     <form method="get" action="/">
         <input name="search" placeholder="search" value="">
         <button type="submit">Search</button>
-        <?php if ($search === $client->companyProfile2("$search")): ?>
+    </form>
+    <?php if ($search == $client->companyProfile2()): ?>
+    <div class="container">
+        <div class="containerOne">
             <?php echo $client->companyProfile2("$search")->getTicker() . " " . $client->quote("$search")->getC() . "<br>";
             if ($client->quote("$search")->getDp() < 0) {
                 echo $client->quote("$search")->getDp() . "% (" . $client->quote("$search")->getD() . ")" . "&#x1F53B" . "<br>";
@@ -24,8 +27,9 @@ $search = strtoupper($_GET['search'] ?? '');
                 $client->quote("$search")->getDp() . "% (" . $client->quote("$search")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
             }
             ?>
-        <?php endif; ?>
-    </form>
+            <?php endif; ?>
+        </div>
+    </div>
 </div>
 <div class="container">
     <div class="containerOne">
