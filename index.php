@@ -17,7 +17,7 @@ $search = strtoupper($_GET['search'] ?? '');
         <input name="search" placeholder="search" value="">
         <button type="submit">Search</button>
     </form>
-    <?php if (isset($search) == $client->companyProfile2()): ?>
+    <?php if ($search): ?>
     <div class="container">
         <div class="containerOne">
             <?php echo $client->companyProfile2("$search")->getTicker() . " " . $client->quote("$search")->getC() . "<br>";
