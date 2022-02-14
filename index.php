@@ -24,7 +24,7 @@ $search = strtoupper($_GET['search'] ?? '');
             if ($client->quote("$search")->getDp() < 0) {
                 echo $client->quote("$search")->getDp() . "% (" . $client->quote("$search")->getD() . ")" . "&#x1F53B" . "<br>";
             } else {
-                $client->quote("$search")->getDp() . "% (" . $client->quote("$search")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
+              echo  $client->quote("$search")->getDp() . "% (" . $client->quote("$search")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
             }
             ?>
             <?php endif; ?>
@@ -37,7 +37,7 @@ $search = strtoupper($_GET['search'] ?? '');
         if ($client->quote("AAPL")->getDp() < 0) {
             echo $client->quote("AAPL")->getDp() . "% (" . $client->quote("AAPL")->getD() . ")" . "&#x1F53B" . "<br>";
         } else {
-            $client->quote("AAPL")->getDp() . "% (" . $client->quote("AAPL")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
+           echo $client->quote("AAPL")->getDp() . "% (" . $client->quote("AAPL")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
         }
         ?>
     </div>
@@ -46,7 +46,7 @@ $search = strtoupper($_GET['search'] ?? '');
         if ($client->quote("AMZN")->getDp() < 0) {
             echo $client->quote("AMZN")->getDp() . "% (" . $client->quote("AMZN")->getD() . ")" . "&#x1F53B" . "<br>";
         } else {
-            $client->quote("AMZN")->getDp() . "% (" . $client->quote("AMZN")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
+          echo $client->quote("AMZN")->getDp() . "% (" . $client->quote("AMZN")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
         }
         ?>
     </div>
@@ -57,16 +57,16 @@ $search = strtoupper($_GET['search'] ?? '');
         if ($client->quote("MSFT")->getDp() < 0) {
             echo $client->quote("MSFT")->getDp() . "% (" . $client->quote("MSFT")->getD() . ")" . "&#x1F53B" . "<br>";
         } else {
-            $client->quote("MSFT")->getDp() . "% (" . $client->quote("MSFT")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
+           echo $client->quote("MSFT")->getDp() . "% (" . $client->quote("MSFT")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
         }
         ?>
     </div>
     <div class="containerFour">
         <?php echo $client->companyProfile2("XOM")->getTicker() . " " . $client->quote("XOM")->getC() . "<br>";
-        if ($client->quote("XOM")->getDp() > 0) {
-            echo $client->quote("XOM")->getDp() . "% (" . $client->quote("XOM")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
+        if ($client->quote("XOM")->getDp() < 0) {
+            echo $client->quote("XOM")->getDp() . "% (" . $client->quote("XOM")->getD() . ")" . "&#x1F53B" . "<br>";
         } else {
-            $client->quote("XOM")->getDp() . "% (" . $client->quote("XOM")->getD() . ")" . "&#x1F53B" . "<br>";
+           echo $client->quote("XOM")->getDp() . "% (" . $client->quote("XOM")->getD() . ")" . "<span style='color: green;'> &#x25B2</span>" . "<br>";
         }
         ?>
     </div>
